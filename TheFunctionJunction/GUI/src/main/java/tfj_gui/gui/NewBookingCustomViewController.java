@@ -262,7 +262,7 @@ public class NewBookingCustomViewController implements Initializable {
 //    }
 
     protected String GetBookingID() {
-        String bookingid = "";
+        String bookingid = "0";
         Connection c = Connect.createConnection();
         try {
             String query = "Select max(BookingID) from bookinghistory";

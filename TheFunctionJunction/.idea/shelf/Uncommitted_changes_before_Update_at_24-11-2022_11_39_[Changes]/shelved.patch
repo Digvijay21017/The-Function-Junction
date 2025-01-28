@@ -1,0 +1,315 @@
+Index: GUI/src/main/java/CSVLoaders/customer.csv
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"loginid\",\"password\",\"FirstName\",\"LastName\",\"PhoneNumber\",\"EmailId\",\"DOB\",\"CustomerID\",\"MembershipStatus\",\"DateOfJoining\"\r\nharshit_c,#Harshit,Harshit,Chauhan,9192939495,harshit.c21@iiits.in,1998-11-18,1,New,2022-11-23\r\ndivJha,divJha,Divyanshu,Jha,8182838485,divyanshu.j21@iiits.in,1991-07-24,2,New,2022-11-23\r\nRajaWan,EanRar,Rajas,Wanikar,7172737475,rajaswanikar@gmail.com,2003-08-26,3,New,2022-11-23\r\nNinini,$Ninad,Ninad,Naukarkar,6162636465,ninadNaukarkar@gmail.com,1994-02-28,4,New,2022-11-23\r\nSaReGaMaPaDhaNiSa,SaReGaMaPaDhaNiSa,Sarang,Kate,5152535455,sarangKate@gmail.com,2003-05-16,5,New,2022-11-23\r\nNandChin,$Chinmayanand$,Chinmay,Nandgaokar,3435363738,NandChinmay@gmail.com,2003-09-18,6,New,2022-11-23
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GUI/src/main/java/CSVLoaders/customer.csv b/GUI/src/main/java/CSVLoaders/customer.csv
+--- a/GUI/src/main/java/CSVLoaders/customer.csv	(revision ec8ef4c5b6018fe9972dd4c95fc6ac2fb1af404b)
++++ b/GUI/src/main/java/CSVLoaders/customer.csv	(date 1669270165073)
+@@ -1,7 +1,8 @@
+ "loginid","password","FirstName","LastName","PhoneNumber","EmailId","DOB","CustomerID","MembershipStatus","DateOfJoining"
+ harshit_c,#Harshit,Harshit,Chauhan,9192939495,harshit.c21@iiits.in,1998-11-18,1,New,2022-11-23
+-divJha,divJha,Divyanshu,Jha,8182838485,divyanshu.j21@iiits.in,1991-07-24,2,New,2022-11-23
++divJha,11,Divyanshu,Jha,8182838485,divyanshu.j21@iiits.in,1991-07-24,2,New,2022-11-23
+ RajaWan,EanRar,Rajas,Wanikar,7172737475,rajaswanikar@gmail.com,2003-08-26,3,New,2022-11-23
+ Ninini,$Ninad,Ninad,Naukarkar,6162636465,ninadNaukarkar@gmail.com,1994-02-28,4,New,2022-11-23
+ SaReGaMaPaDhaNiSa,SaReGaMaPaDhaNiSa,Sarang,Kate,5152535455,sarangKate@gmail.com,2003-05-16,5,New,2022-11-23
+-NandChin,$Chinmayanand$,Chinmay,Nandgaokar,3435363738,NandChinmay@gmail.com,2003-09-18,6,New,2022-11-23
+\ No newline at end of file
++NandChin,$Chinmayanand$,Chinmay,Nandgaokar,3435363738,NandChinmay@gmail.com,2003-09-18,6,New,2022-11-23
++2101,dg,D,G,7777777777,dg@gmail.com,2001-10-02,7,New,2022-11-24
+\ No newline at end of file
+Index: GUI/src/main/java/Database/DBconnection/Connect.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Database.DBconnection;\r\nimport java.sql.*;\r\npublic class Connect {\r\n    public static final String user=\"root\";\r\n    public static final String pass=\"#Ur524cmbh3#Q2jrqr2l\";\r\n    public static final String url=\"jdbc:mysql://localhost:3306/the_function_junction\";\r\n    public static Connection con=null;\r\n\r\n    public static Connection createConnection() {\r\n        try {\r\n            //Class.forName(\"com.mysql.jdbc.Driver\");\r\n            con= DriverManager.getConnection(url,user,pass);\r\n        }\r\n        catch (SQLException e){\r\n            e.printStackTrace();\r\n        }\r\n        return con;\r\n    }\r\n    public static void closeConnection(){\r\n        if(con!=null){\r\n            try{\r\n                con.close();\r\n            }\r\n            catch(SQLException e){\r\n                e.printStackTrace();\r\n            }\r\n        }\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GUI/src/main/java/Database/DBconnection/Connect.java b/GUI/src/main/java/Database/DBconnection/Connect.java
+--- a/GUI/src/main/java/Database/DBconnection/Connect.java	(revision ec8ef4c5b6018fe9972dd4c95fc6ac2fb1af404b)
++++ b/GUI/src/main/java/Database/DBconnection/Connect.java	(date 1669267967926)
+@@ -2,7 +2,7 @@
+ import java.sql.*;
+ public class Connect {
+     public static final String user="root";
+-    public static final String pass="#Ur524cmbh3#Q2jrqr2l";
++    public static final String pass="Digvijay@2101";
+     public static final String url="jdbc:mysql://localhost:3306/the_function_junction";
+     public static Connection con=null;
+ 
+Index: GUI/src/main/java/CSVLoaders/bookinghistory.csv
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"BookingID\",\"fname\",\"lname\",\"Email\",\"PhoneNumber\",\"Venue\",\"StartDate\",\"EndDate\",\"Status\"\r\n1,\"Adolf\",\"Patric\",\"adolfpatric@gmail.com\",\"1234567890\",\"Dhanush\",\"2022-11-08\",\"2022-11-12\",\"booked\"\r\n2,\"Akash\",\"Kulkarni\",\"akashkulkarni@gmail.com\",\"9834947924\",\"Lawn\",\"2022-11-11\",\"2022-11-25\",\"Booked\"\r\n3,\"Akash\",\"Kulkarni\",\"akashkulkarni@gmail.com\",\"9834947924\", \"Lawn\",\"2022-11-26\",\"2022-12-01\",\"Booked\"\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GUI/src/main/java/CSVLoaders/bookinghistory.csv b/GUI/src/main/java/CSVLoaders/bookinghistory.csv
+--- a/GUI/src/main/java/CSVLoaders/bookinghistory.csv	(revision ec8ef4c5b6018fe9972dd4c95fc6ac2fb1af404b)
++++ b/GUI/src/main/java/CSVLoaders/bookinghistory.csv	(date 1669268284524)
+@@ -2,3 +2,11 @@
+ 1,"Adolf","Patric","adolfpatric@gmail.com","1234567890","Dhanush","2022-11-08","2022-11-12","booked"
+ 2,"Akash","Kulkarni","akashkulkarni@gmail.com","9834947924","Lawn","2022-11-11","2022-11-25","Booked"
+ 3,"Akash","Kulkarni","akashkulkarni@gmail.com","9834947924", "Lawn","2022-11-26","2022-12-01","Booked"
++
++16,"2","Birthday","Divyanshu","Jha","divyanshu.j21@iiits.in",Golden Hall,"2022-11-01","2022-11-02"
++18,"Conference","Divyanshu","Jha","divyanshu.j21@iiits.in","8182838485",Auditorium,"2022-11-18","2022-11-19"
++19,"Divyanshu","Jha","divyanshu.j21@iiits.in","8182838485","The Large Auditorium",2022-11-02,"2022-11-03","Booked"
++20,"Divyanshu","Jha","divyanshu.j21@iiits.in","8182838485","Sapphire Hall",2022-11-11,"2022-11-12","Booked"
++21,"Divyanshu","Jha","divyanshu.j21@iiits.in","8182838485","Golden Hall",2022-11-03,"2022-11-03","Booked"
++22,"Divyanshu","Jha","divyanshu.j21@iiits.in","8182838485","The HarrenHall",2022-11-29,"2022-11-30","Booked"
++23,"Divyanshu","Jha","divyanshu.j21@iiits.in","8182838485","The HarrenHall",2022-11-24,"2022-11-25","Booked"
+\ No newline at end of file
+Index: GUI/src/main/java/CSVLoaders/Event.csv
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"BookingID\",\"CustomerId\",\"Event_Name\",\"cfname\",\"clname\",\"cEmail\",\"cPhoneNumber\",\"Venue\",\"Start_Date\",\"End_Date\",\"Expected_Cost\",\"Status\"
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GUI/src/main/java/CSVLoaders/Event.csv b/GUI/src/main/java/CSVLoaders/Event.csv
+--- a/GUI/src/main/java/CSVLoaders/Event.csv	(revision ec8ef4c5b6018fe9972dd4c95fc6ac2fb1af404b)
++++ b/GUI/src/main/java/CSVLoaders/Event.csv	(date 1669268284522)
+@@ -1,1 +1,2 @@
+-"BookingID","CustomerId","Event_Name","cfname","clname","cEmail","cPhoneNumber","Venue","Start_Date","End_Date","Expected_Cost","Status"
+\ No newline at end of file
++"BookingID","CustomerId","Event_Name","cfname","clname","cEmail","cPhoneNumber","Venue","Start_Date","End_Date","Expected_Cost","Status"
++23,2,Birthday,Divyanshu,Jha,divyanshu.j21@iiits.in,The HarrenHall,2022-11-24,2022-11-25,101000.0
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"6aa49edf-9c62-4bd6-b468-5e490971a42a\" name=\"Changes\" comment=\"Added description to menues.\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/Event.csv\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/Event.csv\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/EventCSVLoader.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/EventCSVLoader.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/changeCustomerCSV.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/changeCustomerCSV.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GUI/src/main/java/tfj_gui/gui/ChangePasswordViewController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GUI/src/main/java/tfj_gui/gui/ChangePasswordViewController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/GUI/src/main/java/tfj_gui/gui/HelloApplication.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/GUI/src/main/java/tfj_gui/gui/HelloApplication.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PUSH_AUTO_UPDATE\" value=\"true\" />\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2H1v1BDLruJNMk6wSIwYIz3Oe21\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,\r\n    &quot;Project.color&quot;: &quot;302f2a&quot;,\r\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;D:/IIIT/IIIT Shri City/sem3code/lab05&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.3770115&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.packagesearch.PackageSearchGeneralConfigurable&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\IIIT\\IIIT Shri City\\JavaProject\\TFJ\\TheFunctionJunction\\GUI\\src\\main\\resources\\tfj_gui\\gui\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"HelloApplication\" type=\"Application\" factoryName=\"Application\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"tfj_gui.gui.HelloApplication\" />\r\n      <module name=\"GUI\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"tfj_gui.gui.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"6aa49edf-9c62-4bd6-b468-5e490971a42a\" name=\"Changes\" comment=\"\" />\r\n      <created>1667465189804</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1667465189804</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Adding more GUI again.Made internal menu and navigation bar on the left side.\">\r\n      <created>1667559036750</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667559036750</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Adding more GUI again.Made internal menu and navigation bar on the left side.\">\r\n      <created>1667559061244</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667559061244</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Improved navigation panel\">\r\n      <created>1667559931095</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667559931095</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Made Person\">\r\n      <created>1667563143746</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667563143746</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Made Person,Customer,Manager.\">\r\n      <created>1667566442660</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667566442660</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"-\">\r\n      <created>1667571935682</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667571935682</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Adding mysql-connector-java-8.0.30.jar file.\">\r\n      <created>1667656396458</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667656396458</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Added table in MyBookings_View.fxml . &#10;Added output labels in InfoOfAccount_View.fxml.\">\r\n      <created>1667662808181</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667662808181</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\" -\">\r\n      <created>1667815631507</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667815631507</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\" -\">\r\n      <created>1667818435853</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667818435853</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\" -\">\r\n      <created>1667891405978</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667891405978</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\" -\">\r\n      <created>1667894889034</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667894889034</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\" -\">\r\n      <created>1667908728610</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1667908728610</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"Signup added.\">\r\n      <created>1668007457532</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668007457532</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"Signup added.\">\r\n      <created>1668007925812</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668007925812</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00020\" summary=\"Signup WORKING.&#10;Don't use date datatype otherwise signup will not work.&#10;Use String datatype in java and text datatype in mysql.\">\r\n      <created>1668012618589</created>\r\n      <option name=\"number\" value=\"00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668012618589</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00021\" summary=\"Added alerts for login page&#10;1) login id cant be empty&#10;2) password cant be empty&#10;3) login id and password do not match&#10;&#10;Changed a bit in login controller to ensure that 1080*720 is consistent.\">\r\n      <created>1668072680814</created>\r\n      <option name=\"number\" value=\"00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668072680814</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"Added some manager Scenes and their controllers.\">\r\n      <created>1668073572645</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668073572645</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"Exit function implemented.\">\r\n      <created>1668074200175</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668074200175</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00024\" summary=\"booking history partial\">\r\n      <created>1668075035936</created>\r\n      <option name=\"number\" value=\"00024\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668075035936</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00025\" summary=\"booking history partial\">\r\n      <created>1668075195488</created>\r\n      <option name=\"number\" value=\"00025\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668075195488</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00026\" summary=\"Menu&#10;BreakFas&#10;Lunch&#10;Snacks&#10;Dinner\">\r\n      <created>1668078741132</created>\r\n      <option name=\"number\" value=\"00026\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00026\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668078741132</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00027\" summary=\"Menu is made an abstract class.&#10;calculate_cost added as an abstract menthod.\">\r\n      <created>1668079111223</created>\r\n      <option name=\"number\" value=\"00027\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00027\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668079111223</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00028\" summary=\"Manager Booking Added.\">\r\n      <created>1668080085127</created>\r\n      <option name=\"number\" value=\"00028\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00028\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668080085127</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00029\" summary=\"New Booking\">\r\n      <created>1668428902149</created>\r\n      <option name=\"number\" value=\"00029\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00029\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668428902149</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00030\" summary=\"New Booking\">\r\n      <created>1668433716643</created>\r\n      <option name=\"number\" value=\"00030\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00030\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668433716643</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00031\" summary=\"New booking birthday&#10;New booking marriage&#10;New booking new years party&#10;New booking conference&#10;New booking custom\">\r\n      <created>1668435126591</created>\r\n      <option name=\"number\" value=\"00031\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00031\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668435126591</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00032\" summary=\"-\">\r\n      <created>1668436375486</created>\r\n      <option name=\"number\" value=\"00032\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00032\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668436375486</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00033\" summary=\"Fixed case problem with Search.\">\r\n      <created>1668874352382</created>\r\n      <option name=\"number\" value=\"00033\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00033\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668874352382</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00034\" summary=\"AboutUs_View.fxml edited and info added.\">\r\n      <created>1668922015715</created>\r\n      <option name=\"number\" value=\"00034\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00034\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668922015715</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00035\" summary=\"-\">\r\n      <created>1668922138400</created>\r\n      <option name=\"number\" value=\"00035\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00035\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668922138400</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00036\" summary=\"-\">\r\n      <created>1668923157758</created>\r\n      <option name=\"number\" value=\"00036\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00036\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668923157758</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00037\" summary=\"-\">\r\n      <created>1668923531691</created>\r\n      <option name=\"number\" value=\"00037\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00037\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668923531691</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00038\" summary=\"-\">\r\n      <created>1668925182040</created>\r\n      <option name=\"number\" value=\"00038\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00038\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668925182040</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00039\" summary=\"-\">\r\n      <created>1668942691907</created>\r\n      <option name=\"number\" value=\"00039\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00039\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668942691907</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00040\" summary=\"some csv files added\">\r\n      <created>1668947262703</created>\r\n      <option name=\"number\" value=\"00040\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00040\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668947262703</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00041\" summary=\"some csv files added\">\r\n      <created>1668947735276</created>\r\n      <option name=\"number\" value=\"00041\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00041\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668947735276</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00042\" summary=\"-\">\r\n      <created>1668954547076</created>\r\n      <option name=\"number\" value=\"00042\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00042\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668954547076</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00043\" summary=\"added changeCustomerCSV.java and changeBookingHistoryCSV.java .\">\r\n      <created>1669033881299</created>\r\n      <option name=\"number\" value=\"00043\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00043\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669033881299</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00044\" summary=\"-\">\r\n      <created>1669039147370</created>\r\n      <option name=\"number\" value=\"00044\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00044\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669039147370</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00045\" summary=\"Delete customer account by login id after confirming password functionality added.\">\r\n      <created>1669102941582</created>\r\n      <option name=\"number\" value=\"00045\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00045\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669102941582</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00046\" summary=\"Delete customer account in csv added.\">\r\n      <created>1669128567477</created>\r\n      <option name=\"number\" value=\"00046\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00046\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669128567477</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00047\" summary=\"Parth commit:&#10;Managar update data type changed.&#10;Manager loader data type changed.\">\r\n      <created>1669183443320</created>\r\n      <option name=\"number\" value=\"00047\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00047\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669183443320</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00048\" summary=\"Changes done\">\r\n      <created>1669185161906</created>\r\n      <option name=\"number\" value=\"00048\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00048\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669185161906</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00049\" summary=\"Customer update and manager update changed(csv).\">\r\n      <created>1669202151480</created>\r\n      <option name=\"number\" value=\"00049\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00049\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669202151480</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00050\" summary=\"Customer update and manager update changed(csv).\">\r\n      <created>1669202401630</created>\r\n      <option name=\"number\" value=\"00050\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00050\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669202401630</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00051\" summary=\"Added Digvijay and Anurag's photos in About Us. &#10;Also wrote content on help fxml and manager help fxml.\">\r\n      <created>1669204526459</created>\r\n      <option name=\"number\" value=\"00051\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00051\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669204526459</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00052\" summary=\"Added some customers and description to menues.\">\r\n      <created>1669206319073</created>\r\n      <option name=\"number\" value=\"00052\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00052\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669206319073</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00053\" summary=\"Added description to menues.\">\r\n      <created>1669207548793</created>\r\n      <option name=\"number\" value=\"00053\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00053\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669207548794</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"54\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Signup added.\" />\r\n    <MESSAGE value=\"Signup WORKING.&#10;Don't use date datatype otherwise signup will not work.&#10;Use String datatype in java and text datatype in mysql.\" />\r\n    <MESSAGE value=\"Added alerts for login page&#10;1) login id cant be empty&#10;2) password cant be empty&#10;3) login id and password do not match&#10;&#10;Changed a bit in login controller to ensure that 1080*720 is consistent.\" />\r\n    <MESSAGE value=\"Added some manager Scenes\" />\r\n    <MESSAGE value=\"Added some manager Scenes and their controllers.\" />\r\n    <MESSAGE value=\"Exit function implemented.\" />\r\n    <MESSAGE value=\"booking history partial\" />\r\n    <MESSAGE value=\"Menu&#10;BreakFas&#10;Lunch&#10;Snacks&#10;Dinner\" />\r\n    <MESSAGE value=\"Menu is made an abstract class.&#10;calculate_cost added as an abstract menthod.\" />\r\n    <MESSAGE value=\"Manager Booking Added.\" />\r\n    <MESSAGE value=\"New Booking\" />\r\n    <MESSAGE value=\"New booking birthday&#10;New booking marriage&#10;New booking new years party&#10;New booking conference&#10;New booking custom\" />\r\n    <MESSAGE value=\"Fixed case problem with Search.\" />\r\n    <MESSAGE value=\"AboutUs_View.fxml edited and info added.\" />\r\n    <MESSAGE value=\"some csv files added\" />\r\n    <MESSAGE value=\"added changeCustomerCSV.java and changeBookingHistoryCSV.java .\" />\r\n    <MESSAGE value=\"-\" />\r\n    <MESSAGE value=\"Delete customer account by login id after confirming password functionality added.\" />\r\n    <MESSAGE value=\"Delete customer account in csv added.\" />\r\n    <MESSAGE value=\"Parth commit:&#10;Managar update data type changed.&#10;Manager loader data type changed.\" />\r\n    <MESSAGE value=\"Changes done\" />\r\n    <MESSAGE value=\"Customer update and manager update changed(csv).\" />\r\n    <MESSAGE value=\"Added Digvijay and Anurag's photos in About Us. &#10;Also wrote content on help fxml and manager help fxml.\" />\r\n    <MESSAGE value=\"Added some customers and description to menues.\" />\r\n    <MESSAGE value=\"Added description to menues.\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Added description to menues.\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.sql.SQLException\" package=\"java.sql\" />\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision ec8ef4c5b6018fe9972dd4c95fc6ac2fb1af404b)
++++ b/.idea/workspace.xml	(date 1669269037626)
+@@ -4,13 +4,14 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="6aa49edf-9c62-4bd6-b468-5e490971a42a" name="Changes" comment="Added description to menues.">
++    <list default="true" id="6aa49edf-9c62-4bd6-b468-5e490971a42a" name="Changes" comment="All classes working,csv updated ...party!!!!">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/Event.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/Event.csv" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/EventCSVLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/EventCSVLoader.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/changeCustomerCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/changeCustomerCSV.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/tfj_gui/gui/ChangePasswordViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/tfj_gui/gui/ChangePasswordViewController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/tfj_gui/gui/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/tfj_gui/gui/HelloApplication.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/bookinghistory.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/bookinghistory.csv" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/customer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/customer.csv" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/tempcustomer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/CSVLoaders/tempcustomer.csv" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/Database/DBconnection/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/Database/DBconnection/Connect.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/tfj_gui/gui/Signup_View_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/tfj_gui/gui/Signup_View_Controller.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -21,8 +22,8 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="Interface" />
+-        <option value="FxmlFile" />
+         <option value="Class" />
++        <option value="FxmlFile" />
+       </list>
+     </option>
+   </component>
+@@ -43,7 +44,7 @@
+   &quot;keyToString&quot;: {
+     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+-    &quot;Project.color&quot;: &quot;302f2a&quot;,
++    &quot;Project.color&quot;: &quot;362c49&quot;,
+     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+@@ -51,7 +52,7 @@
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;D:/IIIT/IIIT Shri City/sem3code/lab05&quot;,
++    &quot;last_opened_file_path&quot;: &quot;D:/CP,DSA Lab Codes/UG2_OOP/The_Function_Junction(1)/TheFunctionJunction&quot;,
+     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+     &quot;project.structure.side.proportion&quot;: &quot;0.3770115&quot;,
+@@ -62,21 +63,6 @@
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="D:\IIIT\IIIT Shri City\JavaProject\TFJ\TheFunctionJunction\GUI\src\main\resources\tfj_gui\gui" />
+     </key>
+-  </component>
+-  <component name="RunManager">
+-    <configuration name="HelloApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="tfj_gui.gui.HelloApplication" />
+-      <module name="GUI" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="tfj_gui.gui.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -86,6 +72,27 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1667465189804</updated>
++    </task>
++    <task id="LOCAL-00002" summary="Added images at appropriate folders">
++      <created>1667497013867</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1667497013867</updated>
++    </task>
++    <task id="LOCAL-00003" summary="Added Home GUI">
++      <created>1667500365292</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1667500365292</updated>
++    </task>
++    <task id="LOCAL-00004" summary="Adding more GUI">
++      <created>1667501690344</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1667501690344</updated>
+     </task>
+     <task id="LOCAL-00005" summary="Adding more GUI again.Made internal menu and navigation bar on the left side.">
+       <created>1667559036750</created>
+@@ -388,49 +395,28 @@
+       <option name="project" value="LOCAL" />
+       <updated>1669183443320</updated>
+     </task>
+-    <task id="LOCAL-00048" summary="Changes done">
+-      <created>1669185161906</created>
++    <task id="LOCAL-00048" summary="Back button added in custom controller">
++      <created>1669192130297</created>
+       <option name="number" value="00048" />
+       <option name="presentableId" value="LOCAL-00048" />
+       <option name="project" value="LOCAL" />
+-      <updated>1669185161906</updated>
++      <updated>1669192130297</updated>
+     </task>
+-    <task id="LOCAL-00049" summary="Customer update and manager update changed(csv).">
+-      <created>1669202151480</created>
++    <task id="LOCAL-00049" summary="Custom completed">
++      <created>1669194041901</created>
+       <option name="number" value="00049" />
+       <option name="presentableId" value="LOCAL-00049" />
+       <option name="project" value="LOCAL" />
+-      <updated>1669202151480</updated>
++      <updated>1669194041901</updated>
+     </task>
+-    <task id="LOCAL-00050" summary="Customer update and manager update changed(csv).">
+-      <created>1669202401630</created>
++    <task id="LOCAL-00050" summary="All classes working,csv updated ...party!!!!">
++      <created>1669221430772</created>
+       <option name="number" value="00050" />
+       <option name="presentableId" value="LOCAL-00050" />
+       <option name="project" value="LOCAL" />
+-      <updated>1669202401630</updated>
+-    </task>
+-    <task id="LOCAL-00051" summary="Added Digvijay and Anurag's photos in About Us. &#10;Also wrote content on help fxml and manager help fxml.">
+-      <created>1669204526459</created>
+-      <option name="number" value="00051" />
+-      <option name="presentableId" value="LOCAL-00051" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1669204526459</updated>
+-    </task>
+-    <task id="LOCAL-00052" summary="Added some customers and description to menues.">
+-      <created>1669206319073</created>
+-      <option name="number" value="00052" />
+-      <option name="presentableId" value="LOCAL-00052" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1669206319073</updated>
+-    </task>
+-    <task id="LOCAL-00053" summary="Added description to menues.">
+-      <created>1669207548793</created>
+-      <option name="number" value="00053" />
+-      <option name="presentableId" value="LOCAL-00053" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1669207548794</updated>
++      <updated>1669221430772</updated>
+     </task>
+-    <option name="localTasksCounter" value="54" />
++    <option name="localTasksCounter" value="51" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -445,6 +431,8 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
++    <MESSAGE value="Added table in MyBookings_View.fxml . &#10;Added output labels in InfoOfAccount_View.fxml." />
++    <MESSAGE value=" -" />
+     <MESSAGE value="Signup added." />
+     <MESSAGE value="Signup WORKING.&#10;Don't use date datatype otherwise signup will not work.&#10;Use String datatype in java and text datatype in mysql." />
+     <MESSAGE value="Added alerts for login page&#10;1) login id cant be empty&#10;2) password cant be empty&#10;3) login id and password do not match&#10;&#10;Changed a bit in login controller to ensure that 1080*720 is consistent." />
+@@ -465,12 +453,10 @@
+     <MESSAGE value="Delete customer account by login id after confirming password functionality added." />
+     <MESSAGE value="Delete customer account in csv added." />
+     <MESSAGE value="Parth commit:&#10;Managar update data type changed.&#10;Manager loader data type changed." />
+-    <MESSAGE value="Changes done" />
+-    <MESSAGE value="Customer update and manager update changed(csv)." />
+-    <MESSAGE value="Added Digvijay and Anurag's photos in About Us. &#10;Also wrote content on help fxml and manager help fxml." />
+-    <MESSAGE value="Added some customers and description to menues." />
+-    <MESSAGE value="Added description to menues." />
+-    <option name="LAST_COMMIT_MESSAGE" value="Added description to menues." />
++    <MESSAGE value="Back button added in custom controller" />
++    <MESSAGE value="Custom completed" />
++    <MESSAGE value="All classes working,csv updated ...party!!!!" />
++    <option name="LAST_COMMIT_MESSAGE" value="All classes working,csv updated ...party!!!!" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+Index: GUI/src/main/java/CSVLoaders/tempcustomer.csv
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"loginid\",\"password\",\"FirstName\",\"LastName\",\"PhoneNumber\",\"EmailId\",\"DOB\",\"CustomerID\",\"MembershipStatus\",\"DateOfJoining\"\r\n456,222,Suprit,Fhundread,1234567890,sup@gmail.com,2002-08-12,1001,new,2022-11-19\r\n159,444,Khauff,TLE,1234567890,khauff@gmail.com,2001-04-15,1004,new,2022-11-19\r\n135,666,TimeLimitExceed,Terror,1234567890,tle@gmail.com,2001-04-15,1005,new,2022-11-19\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GUI/src/main/java/CSVLoaders/tempcustomer.csv b/GUI/src/main/java/CSVLoaders/tempcustomer.csv
+--- a/GUI/src/main/java/CSVLoaders/tempcustomer.csv	(revision ec8ef4c5b6018fe9972dd4c95fc6ac2fb1af404b)
++++ b/GUI/src/main/java/CSVLoaders/tempcustomer.csv	(date 1669267980923)
+@@ -1,4 +1,7 @@
+ "loginid","password","FirstName","LastName","PhoneNumber","EmailId","DOB","CustomerID","MembershipStatus","DateOfJoining"
+-456,222,Suprit,Fhundread,1234567890,sup@gmail.com,2002-08-12,1001,new,2022-11-19
+-159,444,Khauff,TLE,1234567890,khauff@gmail.com,2001-04-15,1004,new,2022-11-19
+-135,666,TimeLimitExceed,Terror,1234567890,tle@gmail.com,2001-04-15,1005,new,2022-11-19
++harshit_c,#Harshit,Harshit,Chauhan,9192939495,harshit.c21@iiits.in,1998-11-18,1,New,2022-11-23
++divJha,11,Divyanshu,Jha,8182838485,divyanshu.j21@iiits.in,1991-07-24,2,New,2022-11-23
++RajaWan,EanRar,Rajas,Wanikar,7172737475,rajaswanikar@gmail.com,2003-08-26,3,New,2022-11-23
++Ninini,$Ninad,Ninad,Naukarkar,6162636465,ninadNaukarkar@gmail.com,1994-02-28,4,New,2022-11-23
++SaReGaMaPaDhaNiSa,SaReGaMaPaDhaNiSa,Sarang,Kate,5152535455,sarangKate@gmail.com,2003-05-16,5,New,2022-11-23
++NandChin,$Chinmayanand$,Chinmay,Nandgaokar,3435363738,NandChinmay@gmail.com,2003-09-18,6,New,2022-11-23
+Index: GUI/src/main/java/tfj_gui/gui/Signup_View_Controller.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package tfj_gui.gui;\r\n\r\nimport Database.DBconnection.Connect;\r\nimport Login.Customer;\r\nimport javafx.event.ActionEvent;\r\nimport javafx.fxml.FXML;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Node;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.control.*;\r\nimport javafx.stage.Stage;\r\n\r\nimport java.io.IOException;\r\nimport java.sql.Connection;\r\nimport java.sql.SQLException;\r\nimport java.time.LocalDate;\r\nimport java.sql.*;\r\n\r\npublic class Signup_View_Controller\r\n{\r\n    Date DOB;\r\n    static int custid=1000;\r\n    @FXML\r\n    private TextField FirstNameTF;\r\n    @FXML\r\n    private TextField LastNameTF;\r\n    @FXML\r\n    private TextField EmailIdTF;\r\n    @FXML\r\n    private TextField PhoneNumberTF;\r\n    @FXML\r\n    private Button SignUpFinalButton;\r\n    @FXML\r\n    private CheckBox ConfirmDetailsCheckbox;\r\n    @FXML\r\n    private DatePicker DOBTF = new DatePicker();\r\n    @FXML\r\n    private PasswordField PasswordTF;\r\n    @FXML\r\n    private TextField LoginIdTF;\r\n    @FXML\r\n    private Button AvailableButton;\r\n    @FXML\r\n    private Button LoginButton;\r\n    @FXML\r\n    private Label AvailabilityLabel;\r\n    @FXML\r\n    protected void AvailableButtonClicked()\r\n    {\r\n        Customer c = new Customer(FirstNameTF.getText(), LastNameTF.getText(),PhoneNumberTF.getText(),EmailIdTF.getText(),LoginIdTF.getText(),PasswordTF.getText(),((TextField) DOBTF.getEditor()).getText());\r\n\r\n        if (c.Availability(LoginIdTF.getText()))\r\n        {\r\n            AvailabilityLabel.setText(\"Available!!!\");\r\n        }\r\n        else AvailabilityLabel.setText(\"Not Available!!!\");\r\n    }\r\n    @FXML\r\n    private void LoginButtonClicked(ActionEvent event) throws IOException {\r\n        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(\"Login_View.fxml\"));\r\n        Stage stage= (Stage) ((Node)event.getSource()).getScene().getWindow();\r\n        Scene scene = new Scene(fxmlLoader.load(),1080,720);\r\n        stage.setTitle(\"THE FUNCTION JUNCTION\");\r\n        stage.setScene(scene);\r\n        stage.show();\r\n    }\r\n    @FXML\r\n    protected void getDateFromPicker(ActionEvent event)\r\n    {\r\n        LocalDate dob = DOBTF.getValue();\r\n        DOB = Date.valueOf(dob);\r\n    }\r\n\r\n    @FXML\r\n    private void SignUpFinalButtonClicked() throws SQLException {\r\n        Customer c1 = new Customer(FirstNameTF.getText(), LastNameTF.getText(),PhoneNumberTF.getText(),EmailIdTF.getText(),LoginIdTF.getText(),PasswordTF.getText(), ((TextField) DOBTF.getEditor()).getText());\r\n        Connection c= Connect.createConnection();\r\n        try{\r\n            String query=\"select max(customerid) from customer\";\r\n            Statement statement=c.createStatement();\r\n            ResultSet rs=statement.executeQuery(query);\r\n            if(rs.next()){\r\n                custid=rs.getInt(1)+1;\r\n            }\r\n        }\r\n        catch(SQLException e){\r\n            e.printStackTrace();\r\n        }\r\n        finally {\r\n            c.close();\r\n        }\r\n        c1.Signup(FirstNameTF.getText(), LastNameTF.getText(),PhoneNumberTF.getText(),EmailIdTF.getText(),LoginIdTF.getText(),PasswordTF.getText(),DOB.toString(),String.valueOf(custid));\r\n        System.out.println(custid);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GUI/src/main/java/tfj_gui/gui/Signup_View_Controller.java b/GUI/src/main/java/tfj_gui/gui/Signup_View_Controller.java
+--- a/GUI/src/main/java/tfj_gui/gui/Signup_View_Controller.java	(revision ec8ef4c5b6018fe9972dd4c95fc6ac2fb1af404b)
++++ b/GUI/src/main/java/tfj_gui/gui/Signup_View_Controller.java	(date 1669267980932)
+@@ -74,7 +74,7 @@
+     @FXML
+     private void SignUpFinalButtonClicked() throws SQLException {
+         Customer c1 = new Customer(FirstNameTF.getText(), LastNameTF.getText(),PhoneNumberTF.getText(),EmailIdTF.getText(),LoginIdTF.getText(),PasswordTF.getText(), ((TextField) DOBTF.getEditor()).getText());
+-        Connection c= Connect.createConnection();
++        Connection c = Connect.createConnection();
+         try{
+             String query="select max(customerid) from customer";
+             Statement statement=c.createStatement();

@@ -74,7 +74,7 @@ public class Signup_View_Controller
     @FXML
     private void SignUpFinalButtonClicked() throws SQLException {
         Customer c1 = new Customer(FirstNameTF.getText(), LastNameTF.getText(),PhoneNumberTF.getText(),EmailIdTF.getText(),LoginIdTF.getText(),PasswordTF.getText(), ((TextField) DOBTF.getEditor()).getText());
-        Connection c= Connect.createConnection();
+        Connection c = Connect.createConnection();
         try{
             String query="select max(customerid) from customer";
             Statement statement=c.createStatement();
